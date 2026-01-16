@@ -29,6 +29,7 @@ Deployment: Vercel (Vite + React)
 - [Deployment](#deployment)
 - [Final Notes](#final-notes)
 - [Security Consideration](#security-consideration)
+- [Devnet Notes & Limitations](#devnet-notes-&-limitations)
 - [Contributing](#contributing)
 - [FAQ](#faq)
 - [License](#license)
@@ -75,7 +76,7 @@ By exploring this repository, developers will learn how to:
 ## 🧭 Learning Path
 
 ### For Beginners
-1. Start with **Tutorial 1: Wallet Setup** 
+1. Start with **Tutorial 1: Passkey Wallet Setup** 
 2. Understand passkey authentication and smart wallets
 3. Explore the demo store payment flow
 4. Review DocsView for high-level architecture
@@ -106,7 +107,7 @@ By exploring this repository, developers will learn how to:
 - Production-aligned architecture
 
 ### 🎨 **Production-Ready UI**
-- Drop-in `<PayWithSolana />` component
+- Modular `<PayWithUSDC />` component
 - Responsive dark theme
 - Loading states and error handling
 - Transaction history and analytics
@@ -173,9 +174,9 @@ solana-passkey-pay-starter/
 │
 ├── 📁 docs/                        # 📚 Complete documentation
 │   └── tutorials/
-│       ├── TUTORIAL_1_WALLET_SETUP.md
+│       ├── TUTORIAL_1_PASSKEY_WALLET_SETUP.md
 │       ├── TUTORIAL_2_GASLESS_TRANSACTIONS.md
-│       ├── TUTORIAL_3_SESSION_PERSISTENCE_&_AUTO_RECONNECT.md
+│       ├── TUTORIAL_3_SESSION_PERSISTENCE_AND_AUTO_RECONNECT.md
 │       └── TUTORIAL_4_PAYMENT_FLOW.md
 │
 └── 📁 public/                     # Static assets
@@ -249,7 +250,7 @@ This Demo project follows a clean separation of concerns with three primary laye
   - Handles localStorage-based session tracking
   - Paymaster routing configuration
 - **Used In:** `App.tsx`(Wraps the entire app at root level)
-- **Tutorial Reference:** [Tutorial 1](./docs/tutorials/TUTORIAL_1_WALLET_SETUP.md), [Tutorial 3](./docs/tutorials/TUTORIAL_3_SESSION_PERSISTENCE_&_AUTO_RECONNECT.md)
+- **Tutorial Reference:** [Tutorial 1](./docs/tutorials/TUTORIAL_1_PASSKEY_WALLET_SETUP.md), [Tutorial 3](./docs/tutorials/TUTORIAL_3_SESSION_PERSISTENCE_AND_AUTO_RECONNECT.md)
 
 **`src/components/WalletButton.tsx`** 🔌
 - **Purpose:** User-initiated wallet connection and disconnection
@@ -259,14 +260,14 @@ This Demo project follows a clean separation of concerns with three primary laye
   - Provides UI for connect/disconnect actions
   - Displays wallet status indicators
 - **Used In:** Navigation bar
-- **Tutorial Reference:** [Tutorial 1](./docs/tutorials/TUTORIAL_1_WALLET_SETUP.md)
+- **Tutorial Reference:** [Tutorial 1](./docs/tutorials/TUTORIAL_1_PASSKEY_WALLET_SETUP.md)
 
 #### 2. **Payment & gasless Transaction Logic**
 
 **`src/components/PayWithUSDC/index.tsx`** 💳
 - **Purpose:** Core payment execution component
 - **Key Features:**
-  - Creates USDC/Solana transfer instructions
+  - Creates USDC transfer instructions
   - Handles wallet connection flow
   - Executes gasless transactions via Paymaster
   - Manages payment states (idle, connecting, authenticating, success, error)
@@ -327,7 +328,7 @@ Payment flow gating before transaction creation
 - **Responsibilities:**
   - Renders product grid
   - Displays product details and pricing
-  - Integrates `PayWithSolana` component
+  - Integrates `PayWithUSDC` component
   - Handles transaction success callbacks
 - **Core Logic Delegation:** Payment logic handled by `PayWithUSDC`
 - **Tutorial Reference:** [Tutorial 4](./docs/tutorials/TUTORIAL_4_PAYMENT_FLOW.md)
@@ -487,11 +488,11 @@ UI Feedback
 
 ### Step-by-Step Tutorials
 
-1. **[Tutorial 1: Wallet Setup](./docs/tutorials/TUTORIAL_1_WALLET_SETUP.md)**
+1. **[Tutorial 1: Passkey Wallet Setup](./docs/tutorials/TUTORIAL_1_PASSKEY_WALLET_SETUP.md)**
 
 2. **[Tutorial 2: Gasless Transactions](./docs/tutorials/TUTORIAL_2_GASLESS_TRANSACTIONS.md)**
 
-3. **[Tutorial 3: Session Persistence & Auto Reconnect](./docs/tutorials/TUTORIAL_3_SESSION_PERSISTENCE_&_AUTO_RECONNECT.md)**
+3. **[Tutorial 3: Session Persistence And Auto Reconnect](./docs/tutorials/TUTORIAL_3_SESSION_PERSISTENCE_AND_AUTO_RECONNECT.md)**
 
 4. **[Tutorial 4: Payment Flow](./docs/tutorials/TUTORIAL_4_PAYMENT_FLOW.md)**
 
@@ -680,6 +681,19 @@ npm run format
 
 ---
 
+
+## Devnet Notes & Limitations
+
+On Solana devnet, newly created smart wallets may appear with a small SOL balance (~0.0009 SOL).
+
+This balance is not user-funded and not part of the app’s payment model. It is a devnet-side artifact related to account initialization and rent-exemption checks during testing.
+
+This behavior does not occur on mainnet.
+
+
+
+---
+
 ## Final Notes
 
 This repository is intentionally: 
@@ -718,11 +732,11 @@ Open an issue with:
 ### Pull Requests
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+2. Create a feature branch
 3. Make your changes
 4. Add tests (if applicable)
-5. Commit your changes (`git commit -m 'Add amazing feature'`)
-6. Push to the branch (`git push origin feature/amazing-feature`)
+5. Commit your changes
+6. Push to the branch 
 7. Open a Pull Request
 
 ### Development Guidelines
@@ -814,10 +828,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 - **Telegram**: [https://t.me/lazorkit](https://t.me/lazorkit)
 - **Discord**: [Solana Discord](https://discord.gg/solana)
 - **Twitter**: [@lazorkit](https://twitter.com/lazorkit)
-
-### Issues & Feedback
-- **GitHub Issues**: [Report bugs or request features](https://github.com/your-username/repo/issues)
-
 
 ---
 

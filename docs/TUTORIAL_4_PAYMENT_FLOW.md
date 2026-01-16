@@ -369,15 +369,17 @@ This seperation enables a truly gasless payment experience.
 
 ## Devnet Behavior: Why Wallets Appear with Small SOL Balances
 
-On Solana devnet, newly created smart wallets may appear with a small SOL balance (≈ 0.0009 SOL).
+In our demo app on Solana devnet, newly created smart wallets may appear with a very small SOL balance (≈ 0.0009 SOL) immediately after creation.
 
-This SOL is not user-funded and not part of this app’s payment model.
+This SOL is **not provided by the user**, **not sponsored by the app**, and **not part of the payment flow**.
 
-**Why this happens:**
 
-• Devnet faucet behavior may pre-fund accounts
-• Solana rent-exemption edge cases
-• Prevents false-negative transaction failures during testing
+**Why this happens in our demo:**
+
+• Solana devnet may automatically credit minimal lamports during account initialization  
+• Certain wallet creation flows temporarily receive lamports to satisfy rent-exemption checks  
+• This prevents transaction simulation failures when testing smart wallet interactions on devnet
+
 
 **Important clarifications:**
 
@@ -428,9 +430,9 @@ You have now seen how this repository implements a full Solana payment flow usin
 
 ## Next Steps
 
-- **[Tutorial 1: Wallet Setup](./TUTORIAL_1_WALLET_SETUP.md)** - For initial connection flow
+- **[Tutorial 1: Passkey Wallet Setup](./TUTORIAL_1_PASSKEY_WALLET_SETUP.md)** - For initial connection flow
 - **[Tutorial 2: Gasless Transactions](./TUTORIAL_2_GASLESS_TRANSACTIONS.md)** - For fee sponsorship
-- **[Tutorial 3: Session Persistence & Auto Reconnect](./TUTORIAL_3_SESSION_PERSISTENCE_&_AUTO_RECONNECT.md)** - To understand how to persist sessions
+- **[Tutorial 3: Session Persistence And Auto Reconnect](./TUTORIAL_3_SESSION_PERSISTENCE_AND_AUTO_RECONNECT.md)** - To understand how to persist sessions
 
 ---
 

@@ -337,7 +337,7 @@ You have now seen how this repository implements persistent wallet sessions usin
 
 ## Next Steps
 
-- Review [Tutorial 1: Wallet Setup](./TUTORIAL_1_WALLET_SETUP.md) for initial connection flow
+- Review [Tutorial 1: Passkey Wallet Setup](./TUTORIAL_1_PASSKEY_WALLET_SETUP.md) for initial connection flow
 - Review [Tutorial 2: Gasless Transactions](./TUTORIAL_2_GASLESS_TRANSACTIONS.md) for fee sponsorship
 - Explore [Tutorial 4: Payment Flow](./TUTORIAL_2_PAYMENT_FLOW.md) for end-to-end payment flow
 

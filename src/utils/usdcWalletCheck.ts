@@ -295,20 +295,17 @@ export function getManualFundingInstructions(walletAddress: string) {
     title: 'Get Free USDC (Devnet)',
     steps: [
       '1. Visit Circle USDC Faucet',
-      '2. Paste your wallet address',
-      '3. Request USDC (free)',
-      '4. Wait ~10 seconds',
-      '5. Refresh and start paying!'
+      '2. Select Solana devnet',
+      '3. Paste your wallet address',
+      '4. Request USDC (free)',
+      '5. Wait ~10 seconds',
+      '6. Refresh and start paying!'
     ],
     wallet: walletAddress,
     links: [
       {
         text: '🔗 Circle USDC Faucet',
         url: 'https://faucet.circle.com/'
-      },
-      {
-        text: '🔗 SPL Token Faucet',
-        url: 'https://spl-token-faucet.com/?token-name=USDC-Dev'
       }
     ]
   }

@@ -260,13 +260,13 @@ const sig = await signAndSendTransaction({
 
 | Field | Purpose |
 |-------|---------|
-| `instructions` | Activates Solana/SPL Token instructions |
+| `instructions` | Activates Solana/SPL Token instructions(SPL in this demo) |
 | `feeToken: 'USDC'` | Enables Paymaster-style fee abstraction |
 | `computeUnitLimit` | Ensure reliable execution for Paymaster flows |
 
 Because `feeToken` is set:
 - The user does not need SOL
-- Fees are paid using USDC
+- Transaction Fees are paid using USDC
 - LazorKit handles sponsorship(modeled on devnet in this project)
 
 ### ⚠️ Important devnet clarification
@@ -330,8 +330,8 @@ In production, a backend sponsor wallet would cover fees.
 
 ## Next Steps
 
-- Review [Tutorial 1: Wallet Setup](./TUTORIAL_1_WALLET_SETUP.md) to understand wallet connection
-- Explore [Tutorial 3: Session Persistence & Auto Reconnect](./TUTORIAL_3_SESSION_PERSISTENCE_&_AUTO_RECONNECT.md) to understand how to persist sessions
+- Review [Tutorial 1:Passkey Wallet Setup](./TUTORIAL_1_PASSKEY_WALLET_SETUP.md) to understand wallet connection
+- Explore [Tutorial 3: Session Persistence And Auto Reconnect](./TUTORIAL_3_SESSION_PERSISTENCE_AND_AUTO_RECONNECT.md) to understand how to persist sessions
 
 ---
 

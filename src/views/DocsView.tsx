@@ -125,25 +125,25 @@ export function DocsView() {
        <TutorialCard
          title="Passkey Wallet Setup"
          description="Create and authenticate a Solana wallet using WebAuthn passkeys (FaceID / TouchID) with no seed phrases."
-         href="https://github.com/YOUR_REPO/docs/passkey-wallet.md"
+         href="https://github.com/Emmythefirst/SolanaPasskeyPay/blob/main/docs/TUTORIAL_1_PASSKEY_WALLET_SETUP.md"
        />
 
         <TutorialCard
           title="Gasless Payments"
           description="Send USDC on Solana using LazorKit with gas abstracted away for the end user."
-          href="https://github.com/YOUR_REPO/docs/gasless-usdc.md"
+          href="https://github.com/Emmythefirst/SolanaPasskeyPay/blob/main/docs/TUTORIAL_2_GASLESS_TRANSACTIONS.md"
         />
 
         <TutorialCard
           title="Session Pesistence"
           description="See how LazorKit enables persistent passkey-based wallet sessions"
-          href="https://github.com/YOUR_REPO/docs/gasless-usdc.md"
+          href="https://github.com/Emmythefirst/SolanaPasskeyPay/blob/main/docs/TUTORIAL_3_SESSION_PERSISTENCE_AND_AUTO_RECONNECT.md"
         />
 
         <TutorialCard
           title="Demo Payment Flow"
           description="Real-world Solana payment flow using LazorKit"
-          href="https://github.com/YOUR_REPO/docs/gasless-usdc.md"
+          href="https://github.com/Emmythefirst/SolanaPasskeyPay/blob/main/docs/TUTORIAL_4_PAYMENT_FLOW.md"
         />
        </div>
       </section>
