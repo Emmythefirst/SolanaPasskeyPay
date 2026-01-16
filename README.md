@@ -53,7 +53,7 @@ Instead, users authenticate with **FaceID /TouchID / Windows Hello** and transac
 |------------------------|---------------------|
 | Install Phantom/Solflare | No extensions needed |
 | Manages seed phrases | Passkeys (hardware-backed) |
-| Users handle gas | Gasless abstracted from UX |
+| Users handle gas | Gas abstracted from users |
 | Complex UX | Seamless experience |
 
 ---

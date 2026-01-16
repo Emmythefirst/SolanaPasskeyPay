@@ -21,7 +21,7 @@ export function DocsView() {
 
         {/* Note about full documentation location */}
         <p className="text-gray-500 text-sm">
-          Full developer documentation available in the <code className="font-mono">/docs</code> folder.
+          Full developer documentation / tutorials available in the <code className="font-mono">docs/</code> folder.
         </p>
       </header>
 
@@ -69,7 +69,7 @@ export function DocsView() {
           {/* Step 3: Transaction execution */}
           <li className="flex gap-3">
             <ArrowRight className="text-orange-400 mt-1" size={18} />
-            Transactions are signed and sent with optional gas sponsorship
+            Transactions are signed and sent with gas abstracted from users
           </li>
 
           {/* Step 4: User experience */}
@@ -106,7 +106,7 @@ export function DocsView() {
           {/* Feature 4: UI components */}
           <li className="flex items-start gap-3">
             <CheckCircle className="text-green-400 mt-1" size={20} />
-            <span>Drop-in “Pay with Solana” UI component</span>
+            <span>“Pay with USDC” UI component</span>
           </li>
         </ul>
       </section>
