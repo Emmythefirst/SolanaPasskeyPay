@@ -1,13 +1,31 @@
+/**
+ * Navigation Component
+ * 
+ * Main navigation bar for the application with:
+ * - Logo and branding
+ * - Navigation links (Home, Store, History, Analytics, Docs)
+ * - Wallet connection button
+ * - Sticky positioning
+ * - Responsive design
+ * - Mobile dropdown
+ * 
+ * This component provides the primary navigation structure and
+ * handles view switching through callback props.
+ */
+
+
 import React, { useState } from 'react';
 import { ShoppingCart, History, TrendingUp, Menu, X } from 'lucide-react';
 import { LazorKitIcon } from './LazorKitIcon';
 
+// Props for Navigation component containing type definition for available views
 interface NavigationProps {
   view: string;
   setView: (view: 'home' | 'demo' | 'history' | 'analytics' | 'docs') => void;
   walletButton: React.ReactNode;
 }
 
+// Navigation Component - Renders a sticky top navigation bar with logo, links, and wallet button
 export function Navigation({ view, setView, walletButton }: NavigationProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -16,6 +34,7 @@ export function Navigation({ view, setView, walletButton }: NavigationProps) {
     setMobileOpen(false); // close menu after click on mobile
   };
 
+  // Nav Container
   return (
     <nav className="bg-[#1a1a1a] border-b border-white border-opacity-5 sticky top-0 z-50 backdrop-blur-xl bg-opacity-80">
       <div className="max-w-7xl mx-auto px-4 py-4">
